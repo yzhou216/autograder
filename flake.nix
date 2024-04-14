@@ -20,11 +20,11 @@
             python311
             python311Packages.pip
             python311Packages.virtualenv
+            digital
           ];
           buildInputs = [
           ];
-          # LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
-          PATH = "${~/autograder}:$PATH";
+          DIGITAL_JAR = "${pkgs.digital}/shar/java/Digital.jar";
         };
       });
 }
