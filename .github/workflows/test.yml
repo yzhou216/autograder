@@ -12,4 +12,5 @@ jobs:
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-      - run: nix develop --command uv sync && uv run pytest
+      - run: nix develop --command uv sync
+      - run: nix develop --command uv run pytest
